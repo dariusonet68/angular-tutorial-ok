@@ -2,8 +2,15 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name + ' detalies'"> {{ product.name }} </a>
+    <a
+      [title]="product.name + ' detalies'"
+      [routerLink]="['/product', product.id]"
+    >
+      {{ product.name }}
+    </a>
   </h3>
+
+  <!-- ... -->
 
   <p *ngIf="product.description">Description: {{ product.description }}</p>
 
